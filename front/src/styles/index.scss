@@ -1,0 +1,14 @@
+@use './bases/polices';
+
+@import '../components/header/header';
+@import '../components/sideNavBar/sideNavBar.scss';
+@import '../pages/home/home';
+@import '../pages/dashbord/dashboard';
+@import '../components/useMain/userMainData';
+@import '../components/greeting/greetings';
+@import '../components/barChartUser/barChart';
+@import '../components/lineChartUser/lineChartUser';
+@import '../components/radarChartUser/radarChartUser';
+@import '../components/radialBarChartUser/radialBarChartUser\ ';
+@import '../pages/Error/notFoudPage';
+@import '../components/loader/loader';

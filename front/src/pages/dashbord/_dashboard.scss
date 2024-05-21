@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   // box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+main{
+    display: flex;
+}
+
+.user_performances{
+    display: grid;
+    grid-template-columns: repeat(3,220px);
+    grid-gap: 10px;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.dashboard{
+    
+    padding: 5% 5% 0 5%;
+    
+    
+    @media screen and (max-width: 700px) {
+       padding: 15%;
+    }
+}

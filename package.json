@@ -1,0 +1,15 @@
+{
+  "name": "mon-projet",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd back && npm start",
+    "client": "cd front && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
+}

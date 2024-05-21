@@ -1,0 +1,68 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin before-style($backgroundColor) {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $backgroundColor;
+    margin-right: 10px;
+}
+
+.responsive_barChart{
+    margin-top: 100px;
+    position: absolute;
+}
+
+.recharts{
+    background-color: rgba(251, 251, 251, 1);
+    width: 700px;
+    height: 320px;
+    border-radius: 5px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.data_title{
+    @include flex-center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    justify-content: space-around;
+    padding-top: 32px;
+    margin-bottom: 31px;
+
+    &--name, &--weight {
+        font-family:  'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    &--weight{
+        margin-left: 168px;
+
+        &::before {
+            @include before-style(black);
+        }
+    }
+
+    &--calorie::before {
+        @include before-style(rgba(255, 1, 1, 1));
+    }
+}
+
+.my-bar-chart{
+    margin-top: 140px;
+}
+
+.recharts-default-legend{
+    @include flex-center;
+}
+
+.radarChart{
+    margin-top: 16px;
+}

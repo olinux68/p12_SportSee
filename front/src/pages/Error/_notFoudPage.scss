@@ -1,0 +1,45 @@
+@mixin font-styles($color, $fontFamily, $fontWeight) {
+    color: $color;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+}
+
+.center_page{
+    text-align: center;
+    @media screen and (max-width: 400px) {
+        margin-top: 200px;
+    }
+}
+
+.title{
+    @include font-styles(rgba(255, 1, 1, 1), 'Roboto', 700);
+    font-size: 10rem;
+    margin-top: 66px;
+    @media screen and (max-width: 750px) {
+        font-size: 7rem;
+    }
+    @media screen and (max-width: 400px) {
+        font-size: 5rem;
+    }
+    &__text{
+        @include font-styles(rgba(255, 1, 1, 1), 'Roboto', 500);
+        font-size: 1.7rem;
+        line-height: 66px;
+        margin-bottom: 60px;
+        @media screen and (max-width: 750px) {
+            font-size: 1.4rem;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 1rem;
+        }
+    }
+    &__return{
+        @include font-styles(rgba(255, 1, 1, 1), 'Roboto', 500);
+        font-size: 1.12rem;
+        padding-bottom: 80px;
+        text-decoration: underline;
+        @media screen and (max-width: 400px) {
+            font-size: 0.9rem;
+        }
+    }
+}

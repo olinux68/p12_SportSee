@@ -1,0 +1,50 @@
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_list {
+    width: 117px;
+    height: 1024px;
+    background-color:black;
+    @media screen and (max-width: 700px) {
+      height: 1194px;
+    }
+    &--icon {
+      @include flex-center-column;
+      width: 117px;
+      padding-top: 260px;
+      gap: 20px;
+      li {
+        transition: transform 0.6s ease-in-out;
+        margin-top: 10px;
+        &:hover {
+          transform: scale(1.2);
+        }
+        .nav_icon {
+          @include flex-center-column;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          &--logo{
+            width: 64px;
+            height: 64px;
+          }
+        }
+      }
+    }
+  }
+  
+.copyright{
+    @include flex-center-column;
+    &_name{
+        color: white;
+        transform: rotate(270deg);
+        margin-top: 207px;
+        width: 167px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 0.75rem;
+    }
+}

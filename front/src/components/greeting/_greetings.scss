@@ -1,0 +1,24 @@
+@mixin responsive-font-size($desktop-size, $mobile-size) {
+    font-size: $desktop-size;
+    @media screen and (max-width: 700px) {
+        font-size: $mobile-size;
+    }
+}
+
+.user_title{
+    font-family:  'Roboto', sans-serif;
+    padding-bottom: 78px;
+    &--name{
+        @include responsive-font-size(3rem, 2rem);
+        font-weight: 500;
+        span{
+            
+            color: rgba(255, 1, 1, 1);
+        }
+    }
+    &--congrat{
+        font-weight: 400;
+        line-height: 41px;
+        @include responsive-font-size(1.1rem, 0.9rem);
+    }
+}

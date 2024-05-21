@@ -1,0 +1,18 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radarChart{
+    background-color: rgba(40, 45, 48, 1);
+    width: 213px;
+    height: 233px;
+    @include flex-center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.my-radar-chart{
+    margin-top: 60px;
+}

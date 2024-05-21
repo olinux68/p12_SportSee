@@ -1,0 +1,65 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin roboto-font($size, $weight: normal, $line-height: normal) {
+    font-family: 'Roboto', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+.user_data {
+    @include flex-center;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+    }
+}
+
+.energy_container {
+    @media screen and (max-width: 700px) {
+        @include flex-center;
+        gap: 20px;
+        margin-top: 60px;
+    }
+}
+
+.energy_info {
+    @include flex-center;
+    background-color: rgba(251, 251, 251, 1);
+    width: 258px;
+    height: 118px;
+    margin-bottom: 42px;
+    &--logo {
+        width: 60px;
+        height: 60px;
+        margin: 32px;
+    }
+    @media screen and (max-width: 700px) {
+        width: 160px;
+        height: 70px;
+        .energy_info--logo {
+            width: 40px;
+            height: 40px;
+            margin: 15px;
+        }
+    }
+}
+
+.info_calorie {
+    &--number {
+        @include roboto-font(1.2rem, 700, 24px);
+    }
+    &--name {
+        @include roboto-font(0.8rem, 500);
+    }
+    @media screen and (max-width: 700px) {
+        .info_calorie--number {
+            font-size: 0.9rem;
+        }
+        .info_calorie--name {
+            font-size: 0.5rem;
+        }
+    }
+}
